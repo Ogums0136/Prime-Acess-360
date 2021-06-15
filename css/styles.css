@@ -56,7 +56,9 @@ h3 {
 
 p {
   margin-left: 0;
+  text-align: center;
 }
+
 
 @media screen and (min-width: 1024px) {
   body {
@@ -90,7 +92,7 @@ a {
 .link-arrow::after {
   content: "-->";
   margin-left: 5px;
-  transform: margin 0.15s;
+  transition: margin-left 0.15s;
 }
 
 .link-arrow:hover::after {
@@ -133,7 +135,7 @@ a {
   }
 
   .badge--small {
-    font-family: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -141,7 +143,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  
 }
 
 .list--inline .list__item {
@@ -162,7 +163,7 @@ a {
 
 @media screen and (min-width: 1024) {
   .list--tick .list__item {
-    padding-left: o;
+    padding-left: 0;
   }
 }
 
@@ -190,7 +191,7 @@ a {
   align-items: center;
   background: #f3f9fa;
   border-radius: 100%;
-  display: inline-flex;
+  display: block;
   height: 64px;
   justify-content: center;
   width: 64px;
@@ -209,7 +210,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -299,6 +300,8 @@ vertical-align: middle;
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
+  
 }
 
 .input-group .btn {
@@ -533,6 +536,7 @@ vertical-align: middle;
 }
 
 /* Callouts */
+
 .callout {
   padding: 4rem;
   border-radius: 5px;
@@ -546,7 +550,11 @@ vertical-align: middle;
 .callout__heading {
   color: #fff;
   font-size: 3rem;
-  margin-top: 0;
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+.callout__p {
+  margin-left: 5rem;
 }
 
 .callout .btn {
@@ -569,7 +577,7 @@ vertical-align: middle;
 
   .callout .btn {
     justify-self: start;
-    margin: 0 2rem;
+    margin: 0 4rem;
   }
 }
 
@@ -660,7 +668,7 @@ width: 100%;
 
 .nav__item {
   border-bottom: 1px solid #222;
-  padding: 0.5 2;
+  padding: 0.5px;
  
 }
 
@@ -744,10 +752,11 @@ opacity: 1;
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
   font-size: 1.5rem;
   font-weight: 600;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   margin: 0 auto;
@@ -772,14 +781,14 @@ opacity: 1;
 }
 
 /* Features Note that the selector/grid layout here are not thesame as Mosh's project */
-.feature img {
+.feature__image {
   gap: 4rem;
-  width: 70%;
+  width: 100%;
   margin: 12rem 0;
 }
 
 .feature:first-of-type {
-  margin-top: 6rem;
+  margin-top: 0;
 }
 
 .features__heading {
@@ -794,14 +803,17 @@ opacity: 1;
 
 
 /* Showcase Block */
+
 .block-showcase__image > img{
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
+
   .block-showcase .grid {
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    
+    
   }
   .block-showcase__image {
     justify-self: end;
@@ -861,6 +873,7 @@ opacity: 1;
 @media screen and (min-width:768px) {
 .footer__sections {
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
 }
 
 .footer .collapsible__chevron {
